@@ -6,8 +6,8 @@ import Checkbox from 'muicss/lib/react/checkbox';
 import Button from 'muicss/lib/react/button';
 import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
-
 import 'muicss/lib/sass/mui.scss';
+import { toast } from 'react-toastify';
 
 class SnakeToCamelForm extends React.Component {
 	
@@ -29,6 +29,7 @@ class SnakeToCamelForm extends React.Component {
 		this.camelTextArea.controlEl.select();
 		document.execCommand('copy');
 		event.target.focus();
+		toast.info("Copied camelCase text to clipboard.");
 	}
 
 	snakeToCamelHandler(event) {
@@ -80,7 +81,7 @@ class SnakeToCamelForm extends React.Component {
 				</Row>
 				<Row>
 					<Col md="12">
-						<Textarea label="Output" rows="4" value={this.state.camel} placeholder="tryMe" ref={(textarea) => this.camelTextArea = textarea} readonly/>
+						<Textarea label="Output" rows="4" value={this.state.camel} placeholder="tryMe" ref={(textarea) => this.camelTextArea = textarea} readOnly/>
 					</Col>
 				</Row>
 				<Row>
