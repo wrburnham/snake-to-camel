@@ -1,6 +1,5 @@
 import React from 'react';
 import SnakeToCamelForm from './SnakeToCamelForm';
-import logo from './logo.svg';
 import './App.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';

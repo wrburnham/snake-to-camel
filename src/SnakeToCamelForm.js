@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Container from 'muicss/lib/react/container';
 import Textarea from 'muicss/lib/react/textarea';
 import Checkbox from 'muicss/lib/react/checkbox';
