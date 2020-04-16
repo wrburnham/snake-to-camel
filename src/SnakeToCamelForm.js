@@ -49,14 +49,14 @@ class SnakeToCamelForm extends React.Component {
 
 	snakeToCamel(str, capFirst) {
 		var result = str.toLowerCase().replace(
-    		/([-_][a-z])/g,
+    		/([-_][a-z0-9])/g,
     		(group) => group.toUpperCase()
                     .replace('-', '')
                     .replace('_', '')
 		);
 		if (capFirst) {
 			result = result.replace(
-				/([\s][a-z])/g,
+				/([\s][a-z0-9])/g,
 				(group) => group.toUpperCase()
 			);
 			result = result.charAt(0).toUpperCase() + result.substring(1);
